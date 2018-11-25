@@ -1,0 +1,19 @@
+#hero .container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#hero .hero-image {
+    width: 70vw;
+    height: 60vh;
+    background-image: url("../res/palm.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+#portfolio {
+ 
+}
