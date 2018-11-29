@@ -17,8 +17,36 @@ $(function() {
     });
 
 
-    var $target = $('.wrapper');
-    inView('.section').on('enter', function(el){
-      var color = $(el).attr('data-background-color');
-      $target.css('background-color', color );
-    });
+
+    $(function() {
+      $(window).scroll(function () {
+       
+         var horCheck = $("#scroll-container").offset();
+         if (horCheck.left < -50) {
+          $("body").addClass("change-color");
+         }
+         else {
+          $("body").removeClass("change-color");
+         }
+         
+       
+        
+         
+      });
+   });
+
+
+/*
+$(function() {
+   $(document).ready(function () {
+     $("button").click(function() {
+      var horCheck = $("#scroll-container").offset();
+      alert(" Left: " + horCheck.left);
+     });
+     
+      
+   });
+});
+*/
+
+

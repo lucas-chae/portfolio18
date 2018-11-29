@@ -2,6 +2,7 @@ body {
     padding: 0;
     margin: 0;
     background-color: #CBD5DC;
+    transition: 0.3s all;
 }
 
 .change-color {
@@ -88,6 +89,7 @@ nav a {
 .portfolio-item {
     position: absolute;
     top: 50%;
+    margin-left: 100px;
 
 }
 
