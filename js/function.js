@@ -22,16 +22,12 @@ $(function() {
       $(window).scroll(function () {
        
          var horCheck = $("#scroll-container").offset();
-         if (horCheck.left < -50) {
+         if (horCheck.left < -200) {
           $("body").addClass("change-color");
          }
          else {
           $("body").removeClass("change-color");
          }
-         
-       
-        
-         
       });
    });
 
