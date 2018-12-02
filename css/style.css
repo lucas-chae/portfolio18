@@ -1,24 +1,4 @@
-h1 {
-    font-family: 'Cardo', sans-serif;
-    font-size: 3rem;
-    font-weight: 700;
-    color: #333333;
-}
 
-h2 {
-    font-family: 'Cardo', sans-serif;
-    font-size: 2rem;
-    font-weight: 700;
-    color: #333333;
-}
-
-h3 {
-    font-family: 'Cardo', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: #333333;
-    text-align: left;
-}
 
 button {
     background-color: rgba(250, 250, 250, 0);
@@ -30,120 +10,367 @@ button {
     display: inline-block;
     font-size: 16px;
     font-family: 'Cardo', sans-serif;
-}
-
-body {
-    padding: 0;
-    margin: 0;
-    background-color: rgb(182, 196, 206);
-    transition: 0.4s all;
+    transition: 0.5s all;
     transition-timing-function: ease-in-out;
 }
+
+button :hover {
+    background-color:  rgba(250, 250, 250, 100) ;
+    color: white;
+}
+
+
 .change-color {
     background-color: #FAFAFA;
 }
-nav {
-    position: fixed;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
-}
-nav a {
-    text-decoration: none;
-    font-family: 'Cardo';
-    font-style: italic;
-    font-size: 24px;
-    color: #181818;
-    padding: 0 30px 0 30px;
-}
-#title {
-    text-transform: uppercase;
-    position: fixed;
-    top:50px;
-    left: 15vw;
-    font-family: 'Pathway Gothic One', sans-serif;
-    font-size: 36px;
-    color: #181818;
-    z-index: 999;
+
+.change-color-nav {
+    background-color: rgba(182, 196, 206,0.7);
 }
 
-.scroll {
-    position: fixed;
-    bottom: 0;
-}
-.front {
-    z-index: 500;
-    top:0;
-    width: 12000px;
+.displayUp{
+    transform: translateY(-100px);
 }
 
-.hero {
-    width: 100vw;
-    position: relative;
-    display: inline-block;
-    height: 100vh;
-}
-.container{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-}
-.hero .hero-image {
-    width: 70vw;
-    height: 65vh;
-    background-image: url("../res/palm.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-}
-.hero-text {
-    position:absolute;
-    font-family: 'Cardo', sans-serif;
-    font-size: 24px;
-    color: #181818;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-    width: 70vw;
-}
+@media only screen and (max-width: 768px) {
 
-#shift-left {
-    margin-left:-12vw;
-}
+    h1 {
+        font-family: 'Cardo', sans-serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #333333;
+        padding: 0 15px;
+    }
+    
+    h2 {
+        font-family: 'Cardo', sans-serif;
+        font-size: 5vw;
+        font-weight: 700;
+        color: #333333;
+        padding:0 30px 0 30px;
+    }
+    
+    h3 {
+        font-family: 'Cardo', sans-serif;
+        font-size: 1rem;
+        font-weight: 300;
+        color: #333333;
+        text-align: left;
+        padding: 0 15px;
+    }
 
-.hero-half {
-    width: 40vw;
-    position: relative;
-    display: inline-block;
-    height: 100vh;
-}
+    nav {
+        position: fixed;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+        text-align: center;
+        height: 10vh;
+    }
+    nav .container {
+        width:768px;
 
-.hero-space {
-    width:10vw;
-    position: relative;
-    display: inline-block;
-    height: 100vh;
-}
+    }
+    nav a {
+        text-decoration: none;
+        font-family: 'Cardo';
+        font-style: italic;
+        font-size: 24px;
+        color: #181818;
+        padding: 0 7vw;
+        font-weight: 500;
+    }
+    
+
+    #title {
+        text-transform: uppercase;
+        position: fixed;
+        top:20px;
+        left: 15vw;
+        font-family: 'Pathway Gothic One', sans-serif;
+        font-size: 36px;
+        color: #181818;
+        z-index: 999;
+        transition: 0.5s all;
+        transition-timing-function: ease-in-out;
+    }
+    
+
+    body {
+        padding: 0;
+        margin: 0;
+        background-color: rgb(182, 196, 206);
+        transition: 0.2s all;
+        transition-timing-function: ease-in-out;
+    }
+    .hero-text {
+        padding-left: 15px;
+        padding-right: 15px;
+        position:absolute;
+        font-family: 'Cardo', sans-serif;
+        font-size: 20px;
+        color: #181818;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        width: 60vw;
+    }
+    .scroll {
+        position: relative;
+    }
+    .front {
+        width: 100vw;
+    }
+    .hero {
+        display: block;
+        width: 100vw;
+        height: 70vh;
+    }
+    #splash {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+    }
+    #intro {
+        
+    }
+    .hero-half {
+        width: 100vw;
+        display: block;
+        height: 40vh;
+    }
+
+    .hero-space {
+        width: 100vw;
+        height:10vh;
+        display: block;
+    }
+    #shift-left {
+        margin-left: 0;
+    }
+    .container{
+        width:100vw;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .hero-image {
+        position: absolute;
+        width: 70vw;
+        height: 75vh;
+        background-image: url("../res/palm.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+    }
+
 #suicide-prevention img {
-    width:50vw;
+    width:100vw;
 
     height: auto;
     box-shadow: 0px 2px 30px #131c422d
 }
 
 #planA img {
+    width:100vw;
+
+    height: auto;
+}
+
+#TH img {
+    width:100vw;
+
+    height: auto;
+}
+#enjoy img {
+    width:100vw;
+
+    height: auto;
+}
+}
+
+
+
+
+@media only screen and (min-width: 768px) {
+
+    h1 {
+        font-family: 'Cardo', sans-serif;
+        font-size: 3rem;;
+        font-weight: 700;
+        color: #333333;
+    }
+    
+    h2 {
+        font-family: 'Cardo', sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+        color: #333333;
+        padding:0 30px 0 30px;
+    }
+    
+    h3 {
+        font-family: 'Cardo', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: #333333;
+        text-align: left;
+    }
+
+    nav {
+        position: fixed;
+        bottom: 75px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+        text-align: center;
+    }
+    nav .container {
+        width:768px;
+    }
+    nav a {
+        text-decoration: none;
+        font-family: 'Cardo';
+        font-style: italic;
+        font-size: 24px;
+        color: #181818;
+        padding: 0 30px 0 30px;
+    }
+    
+
+    #title {
+        text-transform: uppercase;
+        position: fixed;
+        top:50px;
+        left: 15vw;
+        font-family: 'Pathway Gothic One', sans-serif;
+        font-size: 36px;
+        color: #181818;
+        z-index: 999;
+    }
+
+    .hero-half .container {
+        width:80%;
+    }
+    
+    body {
+        padding: 0;
+        margin: 0;
+        background-color: rgb(182, 196, 206);
+        transition: 0.4s all;
+        transition-timing-function: ease-in-out;
+    }
+    .hero-text {
+        position:absolute;
+        font-family: 'Cardo', sans-serif;
+        font-size: 24px;
+        color: #181818;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        width: 70vw;
+    }
+    .scroll {
+        position: fixed;
+        bottom: 0;
+    }
+    .front {
+        z-index: 500;
+        top:0;
+        width: 12000px;
+    }
+    .container{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    #intro {
+        width: 30vw;
+    }
+
+
+    .hero .hero-image {
+        width: 70vw;
+        height: 65vh;
+        transform: rotate(0deg);
+        background-image: url("../res/palm.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+    
+    
+    .hero {
+        width: 100vw;
+        position: relative;
+        display: inline-block;
+        height: 100vh;
+    }
+    .shift-left {
+        margin-left:-10vw;
+    }
+    .shift-right {
+        margin-left: 5vw;
+    }
+    
+    .hero-half {
+        width: 40vw;
+        position: relative;
+        display: inline-block;
+        height: 100vh;
+    }
+    
+    .hero-space {
+        width:10vw;
+        position: relative;
+        display: inline-block;
+        height: 100vh;
+    }
+
+
+#suicide-prevention img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width:50vw;
+    height: auto;
+    box-shadow: 0px 2px 30px #131c422d
+}
+
+#planA img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width:40vw;
     height: auto;
 }
 
 #TH img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width:60vw;
     height: auto;
 }
 #enjoy img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width:60vw;
     height: auto;
 }
+}
+
