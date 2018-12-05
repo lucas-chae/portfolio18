@@ -2,20 +2,49 @@
     opacity: 0 !important;
 }
 
-button {
+.square-button {
     background-color: rgba(250, 250, 250, 0);
     border: 1px solid #51749C;
-
-    padding: 10px 32px;
+    padding: 8px 22px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 18px;
     font-family: 'Cardo', sans-serif;
-    transition: 0.5s all;
-    transition-timing-function: ease-in-out;
+    animation: spin-out 0.15s forwards ease-in-out;
+    animation-iteration-count: 1;
+    cursor: pointer;
 }
 
+
+
+@keyframes spin {
+    0% {
+        background-color: rgba(250, 250, 250, 0);
+    }
+    100% {
+        background-color: #51749c;
+        color: #ffffff;
+    }
+}
+@keyframes spin-out {
+    0% {
+        background-color: #51749c;
+        color: #ffffff;
+    }
+    100% {
+        background-color: rgba(250, 250, 250, 0);
+    }
+}
+
+
+
+.square-button:hover {
+    /*background-color:#51749C;
+    color: #ffffff; */
+    animation: spin 0.1s forwards linear;
+    animation-iteration-count: 1;
+}
 
 #design {
     opacity: 1;
@@ -67,8 +96,8 @@ button :hover {
 }
 
 .effective {
-    color:  #51749C;
-    transition: color 0.5s ease-in-out;
+    color:  rgb(79, 114, 154, 1);
+    transition: color 0.2s ease-in-out;
 
 }
 
@@ -305,7 +334,15 @@ button :hover {
         font-size: 24px;
         color: #181818;
         padding: 0 30px 0 30px;
-        transition: color 0.5s ease-in-out;
+        transition: color 0.2s ease-in-out;
+    }
+
+    nav .container:hover a {
+        color:  rgb(79, 114, 154, 0.4);
+    }
+
+    nav .container:hover a:hover span:hover{
+        color:  rgb(79, 114, 154, 1);
     }
     
 
