@@ -1,4 +1,6 @@
-
+.displayNone {
+    opacity: 0 !important;
+}
 
 button {
     background-color: rgba(250, 250, 250, 0);
@@ -14,6 +16,38 @@ button {
     transition-timing-function: ease-in-out;
 }
 
+
+#design {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    position: fixed;
+    font-size: 40vw;
+    height:100vh;
+    width:100vw;
+    top:0;
+    left:0;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-family: 'Pathway Gothic One', sans-serif;
+  text-transform: uppercase;
+ 
+}
+
+#design div {
+    transition: 0.5s all;
+    transition-timing-function: ease-in-out;
+}
+
+#inner {
+    transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
+
+}
+
 button :hover {
     background-color:  rgba(250, 250, 250, 100) ;
     color: white;
@@ -21,7 +55,7 @@ button :hover {
 
 
 .change-color {
-    background-color: #FAFAFA;
+    background-color: rgb(248, 248, 248);
 }
 
 .change-color-nav {
@@ -31,6 +65,17 @@ button :hover {
 .displayUp{
     transform: translateY(-100px);
 }
+
+.effective {
+    color:  #51749C;
+    transition: color 0.5s ease-in-out;
+
+}
+
+.ineffective {
+    color: #b3b3b3;
+}
+
 
 @media only screen and (max-width: 768px) {
 
@@ -57,6 +102,14 @@ button :hover {
         color: #333333;
         text-align: left;
         padding: 0 15px;
+    }
+    h4 {
+        font-family: 'Cardo', sans-serif;
+        font-size: 0.8rem;
+        font-weight: 300;
+        color: #5a5a5a;
+        text-align: left;
+        padding: -10px 15px;
     }
 
     nav {
@@ -224,6 +277,16 @@ button :hover {
         text-align: left;
     }
 
+    h4 {
+        font-family: 'Cardo', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: #7c7c7c;
+        text-align: left;
+        margin: -20px 0;
+        font-style: italic;
+    }
+
     nav {
         position: fixed;
         bottom: 75px;
@@ -242,6 +305,7 @@ button :hover {
         font-size: 24px;
         color: #181818;
         padding: 0 30px 0 30px;
+        transition: color 0.5s ease-in-out;
     }
     
 
@@ -285,7 +349,7 @@ button :hover {
     .front {
         z-index: 500;
         top:0;
-        width: 12000px;
+        width: 10000px;
     }
     .container{
         position: absolute;
