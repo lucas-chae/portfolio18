@@ -1,51 +1,125 @@
+/*? Misc. */
+/* #region */
 .displayNone {
     opacity: 0 !important;
 }
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(182, 196, 206);
+    transition: 0.3s all;
+    transition-timing-function: ease-in-out;
+}
+/* #endregion */
 
-.square-button {
-    background-color: rgba(250, 250, 250, 0);
-    border: 1px solid #51749C;
-    padding: 8px 22px;
-    text-align: center;
+/*? Button and Animation */
+/* #region */
+    .square-button {
+        background-color: rgba(250, 250, 250, 0);
+        border: 1px solid #51749C;
+        padding: 8px 22px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 18px;
+        font-family: 'Cardo', sans-serif;
+        animation: spin-out 0.15s forwards ease-in-out;
+        animation-iteration-count: 1;
+        cursor: pointer;
+    }
+    .square-button:hover {
+        /*background-color:#51749C;
+        color: #ffffff; */
+        animation: spin 0.1s forwards linear;
+        animation-iteration-count: 1;
+    }
+    @keyframes spin {
+        0% {
+            background-color: rgba(250, 250, 250, 0);
+        }
+        100% {
+            background-color: #51749c;
+            color: #ffffff;
+        }
+    }
+    @keyframes spin-out {
+        0% {
+            background-color: #51749c;
+            color: #ffffff;
+        }
+        100% {
+            background-color: rgba(250, 250, 250, 0);
+        }
+    }
+/* #endregion */
+
+/*? Modals */
+/* #region */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    /*padding-top: 100px;/* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    top: 100px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    margin-bottom: 150px;
+
+}
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0; width: 0;} 
+    to {top:100px; opacity:1 ;width: 80%;}
+}
+@keyframes animatetop {
+    from {top:-300px; opacity:0; width:0;}
+    to {top:100px; opacity:1; width:80%;}
+}
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: #000;
     text-decoration: none;
-    display: inline-block;
-    font-size: 18px;
-    font-family: 'Cardo', sans-serif;
-    animation: spin-out 0.15s forwards ease-in-out;
-    animation-iteration-count: 1;
     cursor: pointer;
 }
-
-
-
-@keyframes spin {
-    0% {
-        background-color: rgba(250, 250, 250, 0);
-    }
-    100% {
-        background-color: #51749c;
-        color: #ffffff;
-    }
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
 }
-@keyframes spin-out {
-    0% {
-        background-color: #51749c;
-        color: #ffffff;
-    }
-    100% {
-        background-color: rgba(250, 250, 250, 0);
-    }
+.modal-body {padding: 2px 16px;}
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
 }
+/* #endregion */
 
-
-
-.square-button:hover {
-    /*background-color:#51749C;
-    color: #ffffff; */
-    animation: spin 0.1s forwards linear;
-    animation-iteration-count: 1;
-}
-
+/*? Full Background Texts */
+/* #region */
+/** 1. DESIGN */
 #design {
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
@@ -61,14 +135,11 @@
   color: #ffffff;
   font-family: 'Pathway Gothic One', sans-serif;
   text-transform: uppercase;
- 
 }
-
 #design div {
     transition: 0.5s all;
     transition-timing-function: ease-in-out;
 }
-
 #inner {
     transition: transform 0.5s;
   -webkit-transition: transform 0.5s;
@@ -76,38 +147,53 @@
   -o-transition: transform 0.5s;
 
 }
+/* #endregion */
 
-button :hover {
-    background-color:  rgba(250, 250, 250, 100) ;
-    color: white;
-}
-
-
+/*? Mobile Navbar Animation */
+/* #region */
 .change-color {
     background-color: rgb(248, 248, 248);
 }
-
 .change-color-nav {
     background-color: rgba(182, 196, 206,0.7);
 }
-
 .displayUp{
     transform: translateY(-100px);
 }
+/* #endregion */
 
+/*? Desktop Navbar Animation */
+/* #region */
 .effective {
     color:  rgb(79, 114, 154, 1);
     transition: color 0.2s ease-in-out;
+    font-weight: 600;
 
 }
-
 .ineffective {
     color: #b3b3b3;
 }
+/* #endregion */
 
-
+/*! Mobile CSS */
+/* #region */
 @media only screen and (max-width: 768px) {
-
+    /** Misc. */
+    /* #region */
+    .scroll {
+        position: relative;
+    }
+    .container{
+        width:100vw;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    /* #endregion */
+   
+    /** Font */
+    /* #region */
     h1 {
         font-family: 'Cardo', sans-serif;
         font-size: 2.5rem;
@@ -115,7 +201,6 @@ button :hover {
         color: #333333;
         padding: 0 15px;
     }
-    
     h2 {
         font-family: 'Cardo', sans-serif;
         font-size: 5vw;
@@ -123,7 +208,6 @@ button :hover {
         color: #333333;
         padding:0 30px 0 30px;
     }
-    
     h3 {
         font-family: 'Cardo', sans-serif;
         font-size: 1rem;
@@ -140,7 +224,10 @@ button :hover {
         text-align: left;
         padding: -10px 15px;
     }
-
+    /* #endregion */
+    
+    /** Navbar */
+    /* #region */
     nav {
         position: fixed;
         bottom: 15px;
@@ -163,8 +250,15 @@ button :hover {
         padding: 0 7vw;
         font-weight: 500;
     }
+    /* #endregion */
     
-
+    /** Hero */
+    /* #region */
+    #splash {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+    }
     #title {
         text-transform: uppercase;
         position: fixed;
@@ -177,14 +271,8 @@ button :hover {
         transition: 0.5s all;
         transition-timing-function: ease-in-out;
     }
-    
-
-    body {
-        padding: 0;
-        margin: 0;
-        background-color: rgb(182, 196, 206);
-        transition: 0.2s all;
-        transition-timing-function: ease-in-out;
+    .front {
+        width: 100vw;
     }
     .hero-text {
         padding-left: 15px;
@@ -199,45 +287,20 @@ button :hover {
         text-align: center;
         width: 60vw;
     }
-    .scroll {
-        position: relative;
-    }
-    .front {
-        width: 100vw;
-    }
     .hero {
         display: block;
         width: 100vw;
         height: 70vh;
-    }
-    #splash {
-        display: block;
-        width: 100vw;
-        height: 100vh;
-    }
-    #intro {
-        
     }
     .hero-half {
         width: 100vw;
         display: block;
         height: 40vh;
     }
-
     .hero-space {
         width: 100vw;
         height:10vh;
         display: block;
-    }
-    #shift-left {
-        margin-left: 0;
-    }
-    .container{
-        width:100vw;
-        position: relative;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
     }
     .hero-image {
         position: absolute;
@@ -252,44 +315,62 @@ button :hover {
         transform: translate(-50%,-50%);
         text-align: center;
     }
-
-#suicide-prevention img {
-    width:100vw;
-
-    height: auto;
-    box-shadow: 0px 2px 30px #131c422d
+    #shift-left {
+        margin-left: 0;
+    }
+    /* #endregion */
+   
+   /** Images */
+   /* #region */
+    #suicide-prevention img {
+        width:100vw;
+        height: auto;
+        box-shadow: 0px 2px 30px #131c422d
+    }
+    #planA img {
+        width:100vw;
+        height: auto;
+    }
+    #TH img {
+        width:100vw;
+        height: auto;
+    }
+    #enjoy img {
+        width:100vw;
+        height: auto;
+    }
+    /* #endregion */
 }
+/* #endregion */
 
-#planA img {
-    width:100vw;
-
-    height: auto;
-}
-
-#TH img {
-    width:100vw;
-
-    height: auto;
-}
-#enjoy img {
-    width:100vw;
-
-    height: auto;
-}
-}
-
-
-
-
+/*! Desktop CSS */
+/* #region */
 @media only screen and (min-width: 768px) {
-
+    /** Misc. */
+    /* #region */
+    .scroll {
+        position: fixed;
+        bottom: 0;
+    }
+    .container{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    #intro {
+        width: 30vw;
+    }
+    /* #endregion */
+    
+    /** Font */
+    /* #region */
     h1 {
         font-family: 'Cardo', sans-serif;
         font-size: 3rem;;
         font-weight: 700;
         color: #333333;
     }
-    
     h2 {
         font-family: 'Cardo', sans-serif;
         font-size: 2rem;
@@ -297,7 +378,6 @@ button :hover {
         color: #333333;
         padding:0 30px 0 30px;
     }
-    
     h3 {
         font-family: 'Cardo', sans-serif;
         font-size: 1.5rem;
@@ -305,7 +385,6 @@ button :hover {
         color: #333333;
         text-align: left;
     }
-
     h4 {
         font-family: 'Cardo', sans-serif;
         font-size: 1.2rem;
@@ -315,7 +394,10 @@ button :hover {
         margin: -20px 0;
         font-style: italic;
     }
+    /* #endregion */
 
+    /** Navbar */
+    /* #region */
     nav {
         position: fixed;
         bottom: 75px;
@@ -336,16 +418,17 @@ button :hover {
         padding: 0 30px 0 30px;
         transition: color 0.2s ease-in-out;
     }
-
     nav .container:hover a {
         color:  rgb(79, 114, 154, 0.4);
     }
-
     nav .container:hover a:hover span:hover{
         color:  rgb(79, 114, 154, 1);
+        font-weight: 600;
     }
+    /* #endregion */
     
-
+    /** Hero */
+    /* #region */
     #title {
         text-transform: uppercase;
         position: fixed;
@@ -356,17 +439,10 @@ button :hover {
         color: #181818;
         z-index: 999;
     }
-
-    .hero-half .container {
-        width:80%;
-    }
-    
-    body {
-        padding: 0;
-        margin: 0;
-        background-color: rgb(182, 196, 206);
-        transition: 0.4s all;
-        transition-timing-function: ease-in-out;
+    .front {
+        z-index: 500;
+        top:0;
+        width: 10000px;
     }
     .hero-text {
         position:absolute;
@@ -379,26 +455,27 @@ button :hover {
         text-align: center;
         width: 70vw;
     }
-    .scroll {
-        position: fixed;
-        bottom: 0;
+    .hero {
+        width: 100vw;
+        position: relative;
+        display: inline-block;
+        height: 100vh;
     }
-    .front {
-        z-index: 500;
-        top:0;
-        width: 10000px;
+    .hero-half {
+        width: 40vw;
+        position: relative;
+        display: inline-block;
+        height: 100vh;
     }
-    .container{
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
+    .hero-half .container {
+        width:80%;
     }
-    #intro {
-        width: 30vw;
+    .hero-space {
+        width:10vw;
+        position: relative;
+        display: inline-block;
+        height: 100vh;
     }
-
-
     .hero .hero-image {
         width: 70vw;
         height: 65vh;
@@ -408,70 +485,49 @@ button :hover {
         background-repeat: no-repeat;
         background-position: 50% 50%;
     }
-    
-    
-    .hero {
-        width: 100vw;
-        position: relative;
-        display: inline-block;
-        height: 100vh;
-    }
     .shift-left {
         margin-left:-10vw;
     }
     .shift-right {
         margin-left: 5vw;
     }
-    
-    .hero-half {
-        width: 40vw;
-        position: relative;
-        display: inline-block;
-        height: 100vh;
+    /* #endregion */
+
+    /** Images */
+    /* #region */
+    #suicide-prevention img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width:50vw;
+        height: auto;
+        box-shadow: 0px 2px 30px #131c422d
     }
-    
-    .hero-space {
-        width:10vw;
-        position: relative;
-        display: inline-block;
-        height: 100vh;
+    #planA img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width:40vw;
+        height: auto;
     }
-
-
-#suicide-prevention img {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width:50vw;
-    height: auto;
-    box-shadow: 0px 2px 30px #131c422d
+    #TH img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width:60vw;
+        height: auto;
+    }
+    #enjoy img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width:60vw;
+        height: auto;
+    }
+    /* #endregion */
 }
-
-#planA img {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width:40vw;
-    height: auto;
-}
-
-#TH img {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width:60vw;
-    height: auto;
-}
-#enjoy img {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width:60vw;
-    height: auto;
-}
-}
-
+/* #endregion */ 

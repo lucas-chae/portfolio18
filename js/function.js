@@ -40,20 +40,49 @@ $(function() {
      
        var menuTrigger = $("#scroll-container").offset();
        var viewWidth = $(window).width();
-       console.log("menuTrigger is" + menuTrigger.left);
-       console.log("viewWidth is" + viewWidth);
-       if (menuTrigger.left <= -0.8 * viewWidth) {
-        $("#list-portfolio").addClass("effective");
-        $("#list-about").addClass("ineffective");
-        $("#list-contact").addClass("ineffective");
-        $("#design").removeClass("displayNone");
-       }
-       else {
+       
+       console.log("viewWidth smaller is" + (-1.6 * viewWidth));
+       console.log("menuTrigger left is" + menuTrigger.left);
+       console.log("viewWidth greater is" + (-0.8 * viewWidth));
+
+       if (-0.8 * viewWidth < menuTrigger.left && menuTrigger.left <= 0) {
         $("#list-portfolio").removeClass("effective");
+        $("#list-portfolio").removeClass("ineffective");
+        $("#list-about").removeClass("effective");
         $("#list-about").removeClass("ineffective");
+        $("#list-contact").removeClass("effective");
         $("#list-contact").removeClass("ineffective");
         $("#design").addClass("displayNone");
        }
+
+       else if (-2.0 * viewWidth < menuTrigger.left && menuTrigger.left  <= -0.8 * viewWidth) {
+        $("#list-portfolio").addClass("effective");
+        $("#list-portfolio").removeClass("ineffective");
+        $("#list-about").addClass("ineffective");
+        $("#list-about").removeClass("effective");
+        $("#list-contact").addClass("ineffective");
+        $("#list-contact").removeClass("effective");
+        $("#design").removeClass("displayNone");
+       }
+       else if (-4.0 * viewWidth < menuTrigger.left && menuTrigger.left <= -2.0 * viewWidth) {
+        $("#list-portfolio").addClass("ineffective");
+        $("#list-portfolio").removeClass("effective");
+        $("#list-about").addClass("effective");
+        $("#list-about").removeClass("ineffective");
+        $("#list-contact").addClass("ineffective");
+        $("#list-contact").removeClass("effective");
+        $("#design").removeClass("displayNone");
+       }
+       else {
+        $("#list-portfolio").addClass("ineffective");
+        $("#list-portfolio").removeClass("effective");
+        $("#list-about").addClass("ineffective");
+        $("#list-about").removeClass("effective");
+        $("#list-contact").addClass("effective");
+        $("#list-contact").removeClass("ineffective");
+        $("#design").removeClass("displayNone");
+       }
+
 
        
     });
