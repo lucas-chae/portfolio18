@@ -126,6 +126,31 @@ $(function() {
     });
 });
 
+$(function () {
+  $(document).ready(function () {
+    $('.myBtn').click(function (e) {
+      var buttonid = $(this).attr('id');
+      buttonid += "-content"
+      var modal = $('#' + buttonid)[0];
+      $('#' + buttonid).css("display", "block");
+      $('.close').click(function (e) {
+        $('#' + buttonid).css("display", "none");
+      });
+      window.onclick = function (e) {
+        if (e.target == modal) {
+          $('#' + buttonid).css("display", "none");
+        }
+      }
+    });
+
+
+
+
+});
+
+
+
+});
 
 /*
 $(function() {
