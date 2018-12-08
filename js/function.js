@@ -37,10 +37,9 @@ $(function() {
 
    $(function() {
     $(window).scroll(function () {
-     
        var menuTrigger = $("#scroll-container").offset();
        var viewWidth = $(window).width();
-       
+      
        console.log("viewWidth smaller is" + (-1.6 * viewWidth));
        console.log("menuTrigger left is" + menuTrigger.left);
        console.log("viewWidth greater is" + (-0.8 * viewWidth));
@@ -54,7 +53,6 @@ $(function() {
         $("#list-contact").removeClass("ineffective");
         $("#design").addClass("displayNone");
        }
-
        else if (-2.0 * viewWidth < menuTrigger.left && menuTrigger.left  <= -0.8 * viewWidth) {
         $("#list-portfolio").addClass("effective");
         $("#list-portfolio").removeClass("ineffective");
@@ -92,7 +90,6 @@ $(function() {
 
    $(function() {
     $(window).scroll(function () {
-
       if ($(window).width() <= 768) {
       if ($(this).scrollTop() >50  ) {
        $("body").addClass("change-color");
@@ -101,12 +98,9 @@ $(function() {
       else {
        $("body").removeClass("change-color");
        $("nav").removeClass("change-color-nav");
-       
       }
     }
-
       if ($(window).width() <= 768) {
-
       if ($(this).scrollTop() > 150) {
         $("#title").addClass("displayUp");
       }
@@ -114,7 +108,6 @@ $(function() {
         $("#title").removeClass("displayUp");
       }
     }
-
    });
     $(window).resize(function() {
       if ($(window).width() >= 768) {
@@ -136,15 +129,21 @@ $(function () {
       $('.close').click(function (e) {
         $('#' + buttonid).css("display", "none");
       });
+
+      // Press esc to close modal
+      $(document).on('keydown', function(e) {
+        if (e.keyCode === 27) {
+          $('#' + buttonid).css("display", "none");
+        }
+      });
+      // Click outside of modal box to close modal
       window.onclick = function (e) {
         if (e.target == modal) {
           $('#' + buttonid).css("display", "none");
         }
       }
+
     });
-
-
-
 
 });
 
