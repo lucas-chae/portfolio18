@@ -44,7 +44,7 @@ $(function() {
        console.log("menuTrigger left is" + menuTrigger.left);
        console.log("viewWidth greater is" + (-0.8 * viewWidth));
 
-       if (-0.8 * viewWidth < menuTrigger.left && menuTrigger.left <= 0) {
+       if (-0.5 * viewWidth < menuTrigger.left && menuTrigger.left <= 0) {
         $("#list-portfolio").removeClass("effective");
         $("#list-portfolio").removeClass("ineffective");
         $("#list-about").removeClass("effective");
@@ -53,7 +53,7 @@ $(function() {
         $("#list-contact").removeClass("ineffective");
         $("#design").addClass("displayNone");
        }
-       else if (-2.0 * viewWidth < menuTrigger.left && menuTrigger.left  <= -0.8 * viewWidth) {
+       else if (-2.0 * viewWidth < menuTrigger.left && menuTrigger.left  <= -0.5 * viewWidth) {
         $("#list-portfolio").addClass("effective");
         $("#list-portfolio").removeClass("ineffective");
         $("#list-about").addClass("ineffective");
