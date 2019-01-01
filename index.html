@@ -2,6 +2,11 @@
 <html lang="en">
 
 
+<!--TODO Fix Portfolio Mobile Layout -->
+<!--TODO Modal Contents-->
+<!--TODO Other Portfolio Contents-->
+<!--TODO About-->
+<!--TODO Contact-->
 
 <head>
     <meta charset="UTF-8">
@@ -16,33 +21,38 @@
 <body>
 
     <!--! Presets-->
-        <!--? Navigation -->
-        <!-- #region-->
-        <nav>
-            <div class="container">
-                <a id="list-portfolio" href><span>Portfolio</span></a>
-                <a id="list-about" href><span>About</span></a>
-                <a id="list-contact" href><span>Contact</span></a>
-            </div>
-        </nav>
-        <!-- #endregion-->
-
-        <!--? Title-->
-        <!-- #region-->
-        <div id="title">Lucas Chae</div>
-        <!-- #endregion-->
-
-        <!--? Background full texts-->
-        <!-- #region-->
-        <div id="design" class="displayNone">
-            <div id="inner">Design</div>
+    <!--? Navigation -->
+    <!-- #region-->
+    <nav>
+        <div class="container">
+            <a id="list-portfolio" href><span>ux</span></a>
+            <a id="list-about" href><span>misc.</span></a>
+            <a id="list-contact" href><span>me</span></a>
         </div>
-        <!-- #endregion-->
+    </nav>
+    <!-- #endregion-->
+
+    <!--? Title-->
+    <!-- #region-->
+    <div id="title">Lucas Chae</div>
+    <!-- #endregion-->
+
+    <!--? Background full texts-->
+    <!-- #region-->
+    <div id="design" class="displayNone">
+        <div class="inner">design</div>
+    </div>
+
+    <div id="art" class="displayNone">
+            <div class="inner">misc.</div>
+        </div>
+   
+    <!-- #endregion-->
 
     <!--! Main Container-->
     <!-- #region-->
-<div class="scroll front" id="scroll-container">
-    <!-- #endregion-->
+    <div class="scroll front" id="scroll-container">
+        <!-- #endregion-->
 
         <!--? Landing page-->
         <!-- #region-->
@@ -59,54 +69,77 @@
         <!-- #region-->
         <div class="hero-half shift-left">
             <div class="container" id="intro">
-                <h2>Good design goes beyond the screen. </br> Great experience continues to go on and become an integral part of our lives.  </h2>
-                <h2>I want to do just that - design products that leave long lasting impressions to make people's lives a little better.</h2>
+                <h2>Good design goes beyond the screen. </br> Great experience continues to go on and become an
+                    integral part of our lives. </h2>
+                <h2>I want to do just that - design products that leave long lasting impressions to make people's lives
+                    a little better.</h2>
             </div>
         </div>
         <!-- #endregion-->
 
-            <!--* gap-->
-            <!-- #region-->
+        <!--* gap-->
+        <!-- #region-->
+        
         <div class="hero-space">
             <div class="container"></div>
         </div>
         <!-- #endregion-->
-
+        <div class="littlehr"></div>
         <!--? PF item [Suicide Prevention]-->
-            <!--* image-->
-            <!-- #region-->
-            <div class="hero-half shift-right">
-                <div class="container" id="suicide-prevention">
-                    <img src="res/wordcloud.png">
-                </div>
+        <!--* image-->
+        <!-- #region-->
+        <div class="hero-half shift-right">
+            <div class="container" id="suicide-prevention">
+                <img src="res/portfolio/suicide-prevention/wordcloud.png">
             </div>
-            <!-- #endregion-->
-            <!--* description-->
-            <!-- #region-->
-            <div class="hero-half">
-                <div class="container shift-right">
-                    <div class="description-line"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div><div class="status">in progress</div></div>
-                    <h1>Designing for Suicidal Users</h1>
-                    <h4>Case study on Google's suicidal search results</h4>
-                    <h3>Every month, over half a million people in the US make suicide-related searches on Google. The
-                        automated response that is supposed to stop them and save lives feels lifeless.</h3>
-                    <div id="modal0" class="myBtn square-button"><span>Learn more</span></div>
+        </div>
+        <!-- #endregion-->
+        <!--* description-->
+        <!-- #region-->
+        <div class="hero-half">
+            <div class="container shift-right">
+                <div class="description-line">
+                    <div class="lds-ellipsis">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="status">in progress</div>
                 </div>
+                <h1>Designing for Suicidal Users</h1>
+                <h4>Case study on Google's suicidal search results</h4>
+                <h3>Every month, over half a million people in the US make suicide-related searches on Google. The
+                    automated response that is supposed to stop them and save lives feels lifeless.</h3>
+                <div id="modal0" class="myBtn square-button"><span>Learn more</span></div>
             </div>
-            <!-- #endregion-->
-            <!--* modal-->
-            <!-- #region-->
+        </div>
+        <!-- #endregion-->
+        <!--* modal-->
+        <!-- #region-->
         <div id="modal0-content" class="modal">
             <div class="modal-content">
                 <!--header-->
                 <div class="modal-header">
-                    <img src="res/wordcloud.png">
+                    <img src="res/portfolio/suicide-prevention/suicide-screen.png">
                 </div>
                 <!--content-->
                 <div class="modal-body">
                     <span class="close">&times;</span>
-                    <h2>Some text in the Modal Body1</h2>
-                    <p>Some other text...</p>
+                    <div class="modal-title">Preventing Suicide the Modern Way</div>
+                    <p class="subheading">links</p>
+                    <hr>
+                    <p class="link">Phase I - The Big Announcement</p> <a href="https://uxdesign.cc/preventing-suicide-the-modern-way-86a816e2bf07"
+                        class="link" target="_blank">Read on Medium</a>
+                    <p>Phase II - First cycle (In progress)</p>
+                    <hr>
+                    <p>Inspired by my own experiences with depression and anxiety, I felt the need to reconsider the
+                        impersonal design of current search interfaces regarding suicidal queries. </p>
+                    <p>Featured on UX Collective, Fast Company, CSS-Tricks, and others. </p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/kwvnAFAOLjg" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
                 </div>
                 <!--footer-->
                 <div class="modal-footer">
@@ -115,234 +148,289 @@
             </div>
         </div>
         <!-- #endregion-->
-
+<div class="littlehr"></div>
         <!--? PF item [Three Six Eight]-->
-            <!--* image-->
-            <!-- #region-->
-            <div class="hero-half shift-right">
-                <div class="container" id="three-six-eight">
-                    <img src="res/368_logo.gif">
-                </div>
+        <!--* image-->
+        <!-- #region-->
+        <div class="hero-half shift-right shift-down">
+            <div class="container" id="three-six-eight">
+                <img src="res/portfolio/368/368_logo.gif">
             </div>
-            <!-- #endregion-->
-            <!--* description-->
-            <!-- #region-->
-            <div class="hero-half shift-left-sm">
-                <div class="container">
-                        <div class="description-line"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div><div class="status">in progress</div></div>
-                    <h1>Supporting the Creator Community</h1>
-                    <h4>368 - Brand Proposal</h4>
-                    <h3>The internet is demanding for more viral videos even if it comes at a price of sacrificing content quality. 368 by Casey Neistat might be the solution. </h3>
-                    <div id="modal-1" class="myBtn square-button"><span>Learn more</span></div>
+        </div>
+        <!-- #endregion-->
+        <!--* description-->
+        <!-- #region-->
+        <div class="hero-half shift-left-sm shift-down">
+            <div class="container">
+                <div class="description-line">
+                    <div class="lds-ellipsis">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="status">in progress</div>
                 </div>
+                <h1>Supporting the Creator Community</h1>
+                <h4>368 - Brand Proposal</h4>
+                <h3>The internet is demanding for more viral videos even if it comes at a price of sacrificing content
+                    quality. 368 by Casey Neistat might be the solution. </h3>
+                <div id="modal-1" class="myBtn square-button"><span>Learn more</span></div>
             </div>
-            <!-- #endregion-->
-            <!--* modal-->
-            <!-- #region-->
-            <div id="modal-1-content" class="modal">
-                <div class="modal-content">
-                    <!-- header-->
-                    <div class="modal-header">
-                        <img src="res/wordcloud.png">
-                    </div>
-                    <!-- content-->
-                    <div class="modal-body">
-                        <span class="close">&times;</span>
-                        <h2>Some text in the Modal Body of 368</h2>
-                        <p>Some other text...</p>
-                    </div>
-                    <!-- footer-->
-                    <div class="modal-footer">
-                        <h3>Modal Footer</h3>
-                    </div>
+        </div>
+        <!-- #endregion-->
+        <!--* modal-->
+        <!-- #region-->
+        <div id="modal-1-content" class="modal">
+            <div class="modal-content">
+                <!-- header-->
+                <div class="modal-header">
+                    <img src="res/portfolio/368/modal-header.png">
                 </div>
-            </div>
-            <!-- endregion-->
+                <!-- content-->
+                <div class="modal-body">
+                    <span class="close">&times;</span>
+                    <div class="modal-title" style="font-weight:700;">
+                        "368"
+                    </div>
 
-            <!--* gap-->
-            <!-- #region-->
+                    <p class="subheading">links</p>
+                    <hr>
+                    <p class="link">Phase I - Ideation</p> <a href="https://www.behance.net/gallery/73500189/368-Design"
+                        class="link" target="_blank">Check out on Benahce</a>
+                    <p>Phase II - Proposal (In progress)</p>
+                    <hr>
+                    <p>Space not only brings useful resources,
+                        but it brings a unique collective spirit that can only form
+                        when creators gather togehter in one space with minimal physical barriers.
+                    </p>
+                    <hr>
+                    <img src="res/portfolio/368/main.jpg">
+                    <iframe src="https://www.youtube.com/embed/oYbIkV4yeHw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <!-- footer-->
+                <div class="modal-footer">
+                    <h3>Modal Footer</h3>
+                </div>
+            </div>
+        </div>
+        <!-- endregion-->
+
+        <!--* gap-->
+        <!-- #region-->
         <div class="hero-space">
             <div class="container"></div>
         </div>
         <!-- #endregion-->
-
+        <div class="littlehr"></div>
         <!--? PF item [Teaching Holiday]-->
-            <!--* image-->
-            <!-- #region-->
-            <div class="hero-half">
-                <div class="container" id="TH">
-                    <img src="res/TeachingHoliday.png">
-                </div>
+        <!--* image-->
+        <!-- #region-->
+        <div class="hero-half">
+            <div class="container" id="TH">
+                <img src="res/portfolio/TH/TeachingHoliday.png">
             </div>
-            <!-- #endregion-->
-            <!--* description-->
-            <!-- #region-->
-            <div class="hero-half shift-right">
-                <div class="container">
-                    <h5>2018</h5>
-                    <h1>Sharing Knowledge Across the World</h1>
-                    <h4>Loka 101 - UX Designer </h4> 
-                    <h3>Moving to a whole new country to teach can be rewarding yet very intimidating. I helped designing a service that makes teaching abroad safer and smoother.</h3>
-                    <div id="modal1" class="myBtn square-button">Learn more</div>
-                </div>
+        </div>
+        <!-- #endregion-->
+        <!--* description-->
+        <!-- #region-->
+        <div class="hero-half shift-right">
+            <div class="container">
+                <h5>2018</h5>
+                <h1>Sharing Knowledge Across the World</h1>
+                <h4>Loka 101 - UX Designer </h4>
+                <h3>Moving to a whole new country to teach can be rewarding yet very intimidating. I helped designing a
+                    service that makes teaching abroad safer and smoother.</h3>
+                <div id="modal1" class="myBtn square-button">Learn more</div>
             </div>
-            <!-- #endregion-->
-            <!--* modal-->
-            <!-- #region-->
-            <div id="modal1-content" class="modal">
-                <div class="modal-content">
-                    <!-- header-->
-                    <div class="modal-header">
-                        <img src="res/wordcloud.png">
-                    </div>
-                    <!-- content-->
-                    <div class="modal-body">
-                        <span class="close">&times;</span>
-                        <h2>Some text in the Modal Body2</h2>
-                        <p>Some other text...</p>
-                    </div>
-                    <!-- footer-->
-                    <div class="modal-footer">
-                        <h3>Modal Footer</h3>
-                    </div>
+        </div>
+        <!-- #endregion-->
+        <!--* modal-->
+        <!-- #region-->
+        <div id="modal1-content" class="modal">
+            <div class="modal-content">
+                <!-- header-->
+                <div class="modal-header">
+                    <img src="res/portfolio/TH/sing-up.png">
                 </div>
-            </div>
-            <!-- #endregion-->
+                <!-- content-->
+                <div class="modal-body">
+                    <span class="close">&times;</span>
+                    <div class="modal-title">Teaching Holiday</div>
+                    <p>Teaching Holiday revolutionizes the wy you find a teaching job abroad. Simple application with
+                        modern UI, and a transparent process will help you feel like you're just moving next door. </p>
+                    <hr>
+                    <p>Deatiled Project Overview - Coming Soon</p>
+                    <p class="link">In the meantime...</p> <a href="http://teachingholiday.com" class="link" target="_blank">Check
+                        out their website</a>
 
-            <!--* gap-->
-            <!-- #region-->
-            <div class="hero-space">
-                <div class="container"></div>
+                    <hr>
+                </div>
+                <!-- footer-->
+                <div class="modal-footer">
+                    <h3>Modal Footer</h3>
+                </div>
             </div>
-            <!-- #endregion-->
+        </div>
+        <!-- #endregion-->
 
+        <!--* gap-->
+        <!-- #region-->
+        <div class="hero-space">
+            <div class="container"></div>
+        </div>
+        <!-- #endregion-->
+        <div class="littlehr"></div>
         <!--? PF item [Plan A]-->
-            <!--* image-->
-            <!-- #region-->
-            <div class="hero-half">
-                <div class="container" id="planA">
-                    <img src="res/PlanA.png">
+        <!--* image-->
+        <!-- #region-->
+        <div class="hero-half shift-down-lg">
+            <div class="container" id="planA">
+                <img src="res/portfolio/planA/planA.png">
+            </div>
+        </div>
+        <!-- #endregion-->
+        <!--* description-->
+        <!-- #region-->
+        <div class="hero-half shift-down-lg">
+            <div class="container">
+                <h5>2017</h5>
+                <h1>Affordable Travel for College Students</h1>
+                <h4>Plan A - UX Designer </h4>
+                <h3>A social platform where students and young adults can interact with other travelers. Generate
+                    affordable, flexible, and reliable travel plans customized for you.</h3>
+                <div id="modal2" class="myBtn square-button">Learn more</div>
+            </div>
+        </div>
+        <!-- #endregion-->
+        <!--* modal-->
+        <!-- #region-->
+        <div id="modal2-content" class="modal">
+            <div class="modal-content">
+                <!-- header-->
+                <div class="modal-header">
+                    <img src="res/portfolio/planA/planAheader.jpg">
+                </div>
+                <!-- content-->
+                <div class="modal-body">
+                    <span class="close">&times;</span>
+                    <div class="modal-title">Plan A</div>
+                    <p>PLAN A is a travel planning app that will help people plan their vacation personalized to their
+                        needs.</p>
+                </div>
+                <!-- footer-->
+                <div class="modal-footer">
+                    <h3>Modal Footer</h3>
                 </div>
             </div>
-            <!-- #endregion-->
-            <!--* description-->
-            <!-- #region-->
-            <div class="hero-half">
-                <div class="container">
-                    <h5>2017</h5>
-                    <h1>Affordable Travel for College Students</h1>
-                    <h4>Plan A - UX Designer </h4> 
-                    <h3>A social platform where students and young adults can interact with other travelers. Generate affordable, flexible, and reliable travel plans customized for you.</h3>
-                    <div id="modal2" class="myBtn square-button">Learn more</div>
-                </div>
-            </div>
-            <!-- #endregion-->
-            <!--* modal-->
-            <!-- #region-->
-            <div id="modal2-content" class="modal">
-                <div class="modal-content">
-                    <!-- header-->
-                    <div class="modal-header">
-                        <img src="res/wordcloud.png">
-                    </div>
-                    <!-- content-->
-                    <div class="modal-body">
-                        <span class="close">&times;</span>
-                        <h2>Some text in the Modal Body3</h2>
-                        <p>Some other text...</p>
-                    </div>
-                    <!-- footer-->
-                    <div class="modal-footer">
-                        <h3>Modal Footer</h3>
-                    </div>
-                </div>
-            </div>
-            <!-- #endregion-->
+        </div>
+        <!-- #endregion-->
 
-            <!--* gap-->
-            <!-- #region-->
-            <div class="hero-space">
-                <div class="container"></div>
-            </div>
-            <!-- #endregion-->
-
+        <!--* gap-->
+        <!-- #region-->
+        <div class="hero-space">
+            <div class="container"></div>
+        </div>
+        <!-- #endregion-->
+        <div class="littlehr shift-down"></div>
         <!--? PF item [Enjoy]-->
-            <!--* image-->
-            <!-- #region-->
-            <div class="hero-half">
-                <div class="container" id="enjoy">
-                    <img src="res/enjoy.png">
+        <!--* image-->
+        <!-- #region-->
+        <div class="hero-half">
+            <div class="container" id="enjoy">
+                <img src="res/portfolio/enjoy/enjoy.png">
+            </div>
+        </div>
+        <!-- #endregion-->
+        <!--* description-->
+        <!-- #region-->
+        <div class="hero-half">
+            <div class="container">
+                <h5>2017</h5>
+                <h1>Technology Right at Your Door </h1>
+                <h4>Enjoy - Case study and Redesign </h4>
+                <h3>Enjoy delivers tech items with stiff learning curves personally to your door to help users get used
+                    to their newly owned products. Part of KPCB design application.</h3>
+                <div id="modal3" class="myBtn square-button">Learn more</div>
+            </div>
+        </div>
+        <!-- #endregion-->
+        <!--* modal-->
+        <!-- #region-->
+        <div id="modal3-content" class="modal">
+            <div class="modal-content">
+                <!-- header-->
+                <div class="modal-header">
+                    <img src="res/wordcloud.png">
+                </div>
+                <!-- content-->
+                <div class="modal-body">
+                    <span class="close">&times;</span>
+                    <h2>Some text in the Modal Body4</h2>
+                    <p>Some other text...</p>
+                </div>
+                <!-- footer-->
+                <div class="modal-footer">
+                    <h3>Modal Footer</h3>
                 </div>
             </div>
-            <!-- #endregion-->
-            <!--* description-->
-            <!-- #region-->
-            <div class="hero-half">
-                <div class="container shift-right">
-                    <h5>2017</h5>
-                    <h1>Technology Right at Your Door </h1>
-                    <h4>Enjoy - Case study and Redesign </h4> 
-                    <h3>Enjoy delivers tech items with stiff learning curves personally to your door to help users get used to their newly owned products. Part of KPCB design application.</h3>
-                    <div id="modal3" class="myBtn square-button">Learn more</div>
-                </div>
-            </div>
-            <!-- #endregion-->
-            <!--* modal-->
-            <!-- #region-->
-            <div id="modal3-content" class="modal">
-                <div class="modal-content">
-                    <!-- header-->
-                    <div class="modal-header">
-                        <img src="res/wordcloud.png">
-                    </div>
-                    <!-- content-->
-                    <div class="modal-body">
-                        <span class="close">&times;</span>
-                        <h2>Some text in the Modal Body4</h2>
-                        <p>Some other text...</p>
-                    </div>
-                    <!-- footer-->
-                    <div class="modal-footer">
-                        <h3>Modal Footer</h3>
-                    </div>
-                </div>
-            </div>
-          
+        </div>
 
         
-                <div id="modal3-content" class="modal">
-                    <div class="modal-content">
-                        <!-- header-->
-                        <div class="modal-header">
-                            <img src="res/wordcloud.png">
-                        </div>
-                        <!-- content-->
-                        <div class="modal-body">
-                            <span class="close">&times;</span>
-                            <h2>Some text in the Modal Body4</h2>
-                            <p>Some other text...</p>
-                        </div>
-                        <!-- footer-->
-                        <div class="modal-footer">
-                            <h3>Modal Footer</h3>
-                        </div>
+        <div class="hero-half">
+            <div class="container">
+                <h1>Lucas Chae is me</h1>
+            </div>
+        </div>
+
+        <!--* image-->
+        <!-- #region-->
+        <!-- #endregion-->
+        <!--* description-->
+        <!-- #region-->
+        <div class="hero-half" id="miscellaneous">
+            <div class="container">
+                <div class="experiment-container">
+                    <div class="row1">
+                        <img src="/res/csccee.png">
+                        <img src="/res/csccee.png">
+                        
                     </div>
+                    <div class="row2">
+                        <img src="/res/logos/ux-collective.png">
+                        <img src="/res/golf.png">
+                        <img src="/res/golf.png">
+                    </div>
+
                 </div>
-                <!-- #endregion-->
+            </div>
+        </div>
+
+        
+
+        
+    
+    <!-- #endregion-->
+    <!-- #endregion-->
+
+
+    <!-- #endregion-->
+
+
+    </div>
     
 
-</div>
 
-
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-<script type="text/javascript" src="js/jquery.jInvertScroll.js"></script>
-<script type="text/javascript" src="js/function.js">
-</script>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-    AOS.init();
-</script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/jquery.jInvertScroll.js"></script>
+    <script type="text/javascript" src="js/function.js">
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 
 
