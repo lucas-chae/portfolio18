@@ -9,6 +9,7 @@ body {
     background-color: rgb(182, 196, 206);
     transition: 0.3s all;
     transition-timing-function: ease-in-out;
+    overflow: auto;
 }
 ::-webkit-scrollbar {
     -webkit-appearance: none;
@@ -119,7 +120,7 @@ hr {
 /*? Full Background Texts */
 /* #region */
 /** 1. DESIGN */
-#design, #art {
+#design, #misctile, #moreme {
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
     position: fixed;
@@ -136,10 +137,13 @@ hr {
   text-transform: uppercase;
 
 }
-#art {
-    font-size:60vw !important;
+
+#moreme {
+    font-size: 40vw !important;
+    letter-spacing: -20px;
 }
-#design div, #art div {
+
+#design div, #misctile div, #moreme div {
     transition: 0.5s all;
     transition-timing-function: ease-in-out;
 }
@@ -168,7 +172,7 @@ hr {
 /*? Desktop Navbar Animation */
 /* #region */
 .effective {
-    color:  rgb(79, 114, 154, 1);
+    color:  rgb(36, 47, 131, 1);
     transition: color 0.2s ease-in-out;
     font-weight: 600;
 
@@ -498,7 +502,15 @@ hr {
 /*! Desktop CSS */
 /* #region */
 @media only screen and (min-width: 768px) {
-
+    .contact-icon {
+        margin: 40px 0;
+        align-content: center;
+        text-align: center;
+    }
+    .contact-icon img{
+        margin: 10px 0;
+        
+    }
     .littlehr {
         display: none;
         height: 1px;
@@ -605,11 +617,11 @@ hr {
     .experiment-container img {
         padding: 3px;
         display: inline-block;
-        height: 200px;
+        height: 250px;
         width: auto;
         background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 
  
@@ -643,9 +655,11 @@ hr {
     h2 {
         font-family: 'Cardo', sans-serif;
         font-size: 1.5rem;
-        font-weight: 400;
+        font-weight: 700;
         color: #333333;
         padding:0 30px 0 30px;
+        line-height: 1.4;
+
     }
     h3 {
         font-family: 'Cardo', sans-serif;
@@ -655,6 +669,16 @@ hr {
         text-align: left;
         margin: 30px 0;
     }
+   
+    .bullet {
+        font-size:1.2rem; 
+        margin-top: 25px;
+        margin-bottom: 25px;
+        padding-bottom: 0;
+        line-height: 1.4;
+        
+    }
+    
     h4 {
         font-family: 'Cardo', sans-serif;
         font-size: 1.2rem;
@@ -800,6 +824,12 @@ hr {
     }
     .hero-half {
         width: 40vw;
+        position: relative;
+        display: inline-block;
+        height: 100vh;
+    }
+    .hero-full {
+        width: 80vw;
         position: relative;
         display: inline-block;
         height: 100vh;

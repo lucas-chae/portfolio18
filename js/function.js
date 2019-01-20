@@ -54,7 +54,7 @@ $(function() {
         $("#design").addClass("displayNone");
        
        }
-       else if (-5.5 * viewWidth < menuTrigger.left && menuTrigger.left  <= -0.5 * viewWidth) {
+       else if (-6.0 * viewWidth < menuTrigger.left && menuTrigger.left  <= -0.5 * viewWidth) {
         $("#list-portfolio").addClass("effective");
         $("#list-portfolio").removeClass("ineffective");
         $("#list-about").addClass("ineffective");
@@ -62,10 +62,11 @@ $(function() {
         $("#list-contact").addClass("ineffective");
         $("#list-contact").removeClass("effective");
         $("#design").removeClass("displayNone");
-        $("#art").addClass("displayNone");
+        $("#misctile").addClass("displayNone");
+        $("#moreme").addClass("displayNone");
        
        }
-       else if (-7.0 * viewWidth < menuTrigger.left && menuTrigger.left <= -5.5 * viewWidth) {
+       else if (-6.8 * viewWidth < menuTrigger.left && menuTrigger.left <= -6.0 * viewWidth) {
         $("#list-portfolio").addClass("ineffective");
         $("#list-portfolio").removeClass("effective");
         $("#list-about").addClass("effective");
@@ -73,7 +74,8 @@ $(function() {
         $("#list-contact").addClass("ineffective");
         $("#list-contact").removeClass("effective");
         $("#design").addClass("displayNone");
-        $("#art").removeClass("displayNone");
+        $("#misctile").removeClass("displayNone");
+        $("#moreme").addClass("displayNone");
        
        }
        else {
@@ -83,7 +85,9 @@ $(function() {
         $("#list-about").removeClass("effective");
         $("#list-contact").addClass("effective");
         $("#list-contact").removeClass("ineffective");
-        $("#design").removeClass("displayNone");
+        $("#design").addClass("displayNone");
+        $("#misctile").addClass("displayNone");
+        $("#moreme").removeClass("displayNone");
         //$('#modal-portfolio').css("display", "block");
         
         //$(".square").css({left: -1 * menuTrigger.left+'px'});
