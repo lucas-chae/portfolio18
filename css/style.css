@@ -11,22 +11,28 @@ body {
     transition-timing-function: ease-in-out;
     overflow: auto;
 }
-::-webkit-scrollbar {
-    -webkit-appearance: none;
-    width: 10px;
-    background-color: rgba(0,0,0,.05);
 
-    
-}
-::-webkit-scrollbar-thumb {
-    border-radius: 4px;
-    background-color: rgba(0,0,0,.7);
-    box-shadow: 0 0 1px rgba(255,255,255,.5);
-    z-index: 1000;
-}
 /* #endregion */
 
+@media only screen and (max-height: 700px) {
+ 
+    .shift-up {
+        margin-top: -5vh;
+    }
+    .shift-down-smallscreen {
+        margin-top: 20vh;
+    }
+    .shift-up-lg{
+        margin-top: -10vh;
+    }
+    .shift-down-lg-smallscreen {
+        margin-top: 30vh !important;
+    }
+    .shift-down-xl-smallscreen {
+        margin-top: 70vh !important;
+    }
 
+} 
 
 /*? Modals */
 /* #region */
@@ -182,6 +188,9 @@ hr {
 }
 /* #endregion */
 
+/*! Small mobile CSS */
+
+
 /*! Mobile CSS */
 
 
@@ -189,6 +198,13 @@ hr {
 /* #region */
 @media only screen and (max-width: 768px) {
 
+    html,body
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
     .experiment-container {
 
         display: flex;
@@ -196,10 +212,14 @@ hr {
     }
     .row1 {
         flex: 50%;
+        padding-left: 5px;
+        padding-right: 2.5px;
      
     }
     .row2 {
         flex: 50%;
+        padding-left: 2.5px;
+        padding-right: 5px;
     }
    
     .experiment-container img {
@@ -209,8 +229,12 @@ hr {
         background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+        
     }
-
+    #email svg {
+        transform: scale(1.2, 1.2);
+        
+    }
     .littlehr {
         display: block;
         height: 1px;
@@ -371,6 +395,9 @@ hr {
     .shift-down-lg {
         margin-top: 20vh;
     }
+    .shift-down-xl {
+        margin-top: 40vh;
+    }
     
     /* #endregion */
     
@@ -447,6 +474,11 @@ hr {
         display: block;
         height: 40vh;
     }
+    .hero-full {
+        width: 100vw;
+        display: block;
+        height: 70vh;
+    }
     .hero-space {
         display: none;
     }
@@ -467,6 +499,19 @@ hr {
         margin-left: 0;
     }
     /* #endregion */
+    .contact-icon {
+        position: relative;
+        display: block;
+        left: 50%;
+        transform:translateX(-50%);
+        margin: 40px 0;
+        align-content: center;
+        text-align: center;
+    }
+    .contact-icon img{
+        margin: 10px 0;
+        
+    }
    
    /** Images */
    /* #region */
@@ -501,16 +546,52 @@ hr {
 
 /*! Desktop CSS */
 /* #region */
-@media only screen and (min-width: 768px) {
-    .contact-icon {
-        margin: 40px 0;
-        align-content: center;
-        text-align: center;
-    }
-    .contact-icon img{
-        margin: 10px 0;
+@media only screen and (min-width: 769px) {
+    ::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 10px;
+        background-color: rgba(0,0,0,.05);
+    
         
     }
+    ::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: rgba(0,0,0,.7);
+        box-shadow: 0 0 1px rgba(255,255,255,.5);
+        z-index: 1000;
+    }
+    .contact-icon {
+        position: relative;
+        display: inline-block;
+        top: 50%;
+        transform:translateY(-50%);
+        margin-right: 40px;
+        align-content: center;
+        text-align: center;
+        
+    }
+
+    .contact-icon svg {
+        transition: all 0.12s;
+        fill: #3e3e3e;
+    }
+  
+    #email svg {
+        transform: scale(1.3, 1.3);
+        
+    }
+
+    #email svg:hover {
+        fill: #7cbb00;
+        
+    }
+    #medium svg:hover {
+        fill: #02B875;
+    }
+    #linkedin svg:hover {
+        fill: #0077B5;
+    }
+
     .littlehr {
         display: none;
         height: 1px;
@@ -803,7 +884,7 @@ hr {
     .front {
         z-index: 500;
         top:0;
-        width: 1000vw;
+        width: 840vw;
     }
     .hero-text {
         position:absolute;

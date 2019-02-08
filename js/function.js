@@ -1,5 +1,5 @@
 $(function() {
-    if ($(window).width() >= 768) {
+    if ($(window).width() >= 769) {
         var elem = $.jInvertScroll(['.scroll'],        // an array containing the selector(s) for the elements you want to animate
             {
            //height: 10050, 
