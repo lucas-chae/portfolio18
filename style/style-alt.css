@@ -230,7 +230,7 @@
     padding-bottom: 50px;
     font-family: 'Raleway';
     font-size: 36px;
-    '
+    
  line-height: 2;
     font-weight: 700;
 }
@@ -909,4 +909,20 @@ nav button {
     background-attachment: fixed;
     background-size: cover;
     background-image: url(../image/enjoy-cover.jpg);
+}
+
+.previous {
+    font-size:20px;
+    color: #ffffff;
+    z-index: 1000;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    border-radius: 50%;
+    background-color: rgb(36, 47, 131, 1);
+  
+  text-decoration: none;
+  display: inline-block;
+  padding: 12px 24px;
+
 }
